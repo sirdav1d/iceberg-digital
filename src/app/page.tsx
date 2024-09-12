@@ -9,10 +9,11 @@ import { LogoList3 } from '@/components/ui/LogoList3';
 import { Testimonial7 } from '@/components/ui/Testimonial7';
 import { fetchHygraph } from '@/lib/fetchHygraph';
 import { HomeQuery } from '@/lib/queries';
+import { THomepage } from '@/lib/types';
 
 export default async function Home() {
 	//@typescript-eslint/no-unused-vars
-	const resp: any = await fetchHygraph(HomeQuery);
+	const resp: THomepage = await fetchHygraph(HomeQuery);
 	const data = resp.homepages[0];
 	return (
 		<main className='flex flex-col items-center justify-start min-h-screen'>

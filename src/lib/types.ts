@@ -17,6 +17,11 @@ export type TFeature = {
 	features: HygraphFeature[];
 };
 
+export type TBenefit = {
+	benefitsTitle: string;
+	benefits: HygraphBenefit[];
+};
+
 export type HygraphFeature = {
 	id: string;
 	title: string;
@@ -31,3 +36,18 @@ export type HygraphBenefit = {
 	image: HygraphImage;
 };
 
+export type THomepage = {
+	homepages: ContentHomepage[];
+};
+
+export type ContentHomepage = {
+	logoNav: HygraphImage;
+	headline: string;
+	subheadline: string;
+	ctaHero: string;
+	imageHero: HygraphImage;
+	featureTitle: string;
+	features: HygraphFeature[];
+	benefitsTitle: string;
+	benefits: HygraphBenefit[];
+};

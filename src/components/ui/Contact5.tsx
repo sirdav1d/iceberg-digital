@@ -13,7 +13,6 @@ type Props = {
 	description: string;
 	email: string;
 	phone: string;
-	address: string;
 	button: ButtonProps;
 };
 
@@ -21,7 +20,7 @@ export type Contact5Props = React.ComponentPropsWithoutRef<'section'> &
 	Partial<Props>;
 
 export const Contact5 = (props: Contact5Props) => {
-	const { tagline, heading, description, email, phone, address, button } = {
+	const { tagline, heading, description, email, phone, button } = {
 		...Contact5Defaults,
 		...props,
 	} as Props;
@@ -150,6 +149,5 @@ export const Contact5Defaults: Contact5Props = {
 	description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 	email: 'hello@relume.io',
 	phone: '+1 (555) 000-0000',
-	address: '123 Sample St, Sydney NSW 2000 AU',
 	button: { title: 'Submit' },
 };
