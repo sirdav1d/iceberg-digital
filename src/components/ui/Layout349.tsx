@@ -2,37 +2,20 @@
 
 'use client';
 
-import { Button } from '@relume_io/relume-ui';
-import type { ButtonProps } from '@relume_io/relume-ui';
-import { useEffect, useState } from 'react';
-import { RxChevronRight } from 'react-icons/rx';
+import { HygraphBenefit } from '@/lib/types';
 import clsx from 'clsx';
 import Image from 'next/image';
-
-type ImageProps = {
-	src: string;
-	alt?: string;
-};
-
-type ContentProps = {
-	tagline: string;
-	heading: string;
-	description: string;
-	buttons: ButtonProps[];
-	image: ImageProps;
-};
+import { useEffect, useState } from 'react';
 
 type Props = {
-	contents: ContentProps[];
-	images: ImageProps[];
+	contents: HygraphBenefit[];
 };
 
 export type Layout349Props = React.ComponentPropsWithoutRef<'section'> &
 	Partial<Props>;
 
 export const Layout349 = (props: Layout349Props) => {
-	const { contents, images } = {
-		...Layout349Defaults,
+	const { contents } = {
 		...props,
 	} as Props;
 
@@ -58,9 +41,8 @@ export const Layout349 = (props: Layout349Props) => {
 					{contents.map((content, index) => (
 						<div key={index}>
 							<div className='flex flex-col items-start justify-center md:h-screen'>
-								<p className='mb-3 font-semibold md:mb-4'>{content.tagline}</p>
 								<h2 className='rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl'>
-									{content.heading}
+									{content.title}
 								</h2>
 								<p className='md:text-md'>{content.description}</p>
 
@@ -68,9 +50,9 @@ export const Layout349 = (props: Layout349Props) => {
 									<Image
 										width={400}
 										height={400}
-										src={content.image.src}
+										src={content.image.url}
 										className='w-full'
-										alt={'test'}
+										alt={content.title}
 									/>
 								</div>
 							</div>
@@ -87,120 +69,21 @@ export const Layout349 = (props: Layout349Props) => {
 					))}
 				</div>
 				<div className='sticky top-0 hidden h-screen md:flex md:flex-col md:items-center md:justify-center'>
-					{images.map((image, index) => (
+					{contents.map((content, index) => (
 						<Image
 							width={400}
 							height={400}
 							key={index}
-							src={image.src}
+							src={content.image.url}
 							className={clsx('absolute w-full', {
 								'opacity-100': activeSection === index + 2,
 								'opacity-0': activeSection !== index + 2,
 							})}
-							alt={'test'}
+							alt={'Imagem ilustrativa'}
 						/>
 					))}
 				</div>
 			</div>
 		</section>
 	);
-};
-
-export const Layout349Defaults: Layout349Props = {
-	contents: [
-		{
-			tagline: 'Tagline',
-			heading: 'Medium length section heading goes here',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.',
-			buttons: [
-				{ title: 'Button', variant: 'secondary' },
-				{
-					title: 'Button',
-					variant: 'link',
-					size: 'link',
-					iconRight: <RxChevronRight />,
-				},
-			],
-			image: {
-				src: 'https://d22po4pjz3o32e.cloudfront.net/placeholder-image-1.svg',
-				alt: 'Relume placeholder image 1',
-			},
-		},
-		{
-			tagline: 'Tagline',
-			heading: 'Medium length section heading goes here',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.',
-			buttons: [
-				{ title: 'Button', variant: 'secondary' },
-				{
-					title: 'Button',
-					variant: 'link',
-					size: 'link',
-					iconRight: <RxChevronRight />,
-				},
-			],
-			image: {
-				src: 'https://d22po4pjz3o32e.cloudfront.net/placeholder-image-2.svg',
-				alt: 'Relume placeholder image 2',
-			},
-		},
-		{
-			tagline: 'Tagline',
-			heading: 'Medium length section heading goes here',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.',
-			buttons: [
-				{ title: 'Button', variant: 'secondary' },
-				{
-					title: 'Button',
-					variant: 'link',
-					size: 'link',
-					iconRight: <RxChevronRight />,
-				},
-			],
-			image: {
-				src: 'https://d22po4pjz3o32e.cloudfront.net/placeholder-image-3.svg',
-				alt: 'Relume placeholder image 3',
-			},
-		},
-		{
-			tagline: 'Tagline',
-			heading: 'Medium length section heading goes here',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.',
-			buttons: [
-				{ title: 'Button', variant: 'secondary' },
-				{
-					title: 'Button',
-					variant: 'link',
-					size: 'link',
-					iconRight: <RxChevronRight />,
-				},
-			],
-			image: {
-				src: 'https://d22po4pjz3o32e.cloudfront.net/placeholder-image-4.svg',
-				alt: 'Relume placeholder image 4',
-			},
-		},
-	],
-	images: [
-		{
-			src: 'https://d22po4pjz3o32e.cloudfront.net/placeholder-image-1.svg',
-			alt: 'Relume placeholder image 1',
-		},
-		{
-			src: 'https://d22po4pjz3o32e.cloudfront.net/placeholder-image-2.svg',
-			alt: 'Relume placeholder image 2',
-		},
-		{
-			src: 'https://d22po4pjz3o32e.cloudfront.net/placeholder-image-3.svg',
-			alt: 'Relume placeholder image 3',
-		},
-		{
-			src: 'https://d22po4pjz3o32e.cloudfront.net/placeholder-image-4.svg',
-			alt: 'Relume placeholder image 4',
-		},
-	],
 };

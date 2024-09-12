@@ -60,11 +60,11 @@ export const Footer4 = (props: Footer4Props) => {
 						href={'/'}
 						className='lg:justify-self-start'>
 						<Image
-							width={280}
-							height={140}
+							width={320}
+							height={160}
 							src={logo}
 							alt={'logo iceberg digital'}
-							className='inline-block'
+							className='inline-block lg:scale-125'
 						/>
 					</a>
 					{columnLinks.map((column, index) => (
