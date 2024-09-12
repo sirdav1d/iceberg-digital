@@ -1,6 +1,5 @@
 /** @format */
 
-import { FaXTwitter } from 'react-icons/fa6';
 import {
 	BiLogoFacebookCircle,
 	BiLogoInstagram,

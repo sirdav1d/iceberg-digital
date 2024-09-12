@@ -2,10 +2,10 @@
 
 'use client';
 
-import { useState } from 'react';
-import { Input, Label, Checkbox, Textarea, Button } from '@relume_io/relume-ui';
 import type { ButtonProps } from '@relume_io/relume-ui';
-import { BiEnvelope, BiMap, BiPhone } from 'react-icons/bi';
+import { Button, Checkbox, Input, Label, Textarea } from '@relume_io/relume-ui';
+import { useState } from 'react';
+import { BiEnvelope, BiPhone } from 'react-icons/bi';
 
 type Props = {
 	tagline: string;
