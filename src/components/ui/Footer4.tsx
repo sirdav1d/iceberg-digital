@@ -8,6 +8,9 @@ import {
 	BiLogoYoutube,
 } from 'react-icons/bi';
 
+import logo from '@/assets/logo-dark.png';
+import Image from 'next/image';
+
 type ImageProps = {
 	url?: string;
 	src: string;
@@ -45,20 +48,22 @@ export type Footer4Props = React.ComponentPropsWithoutRef<'section'> &
 	Partial<Props>;
 
 export const Footer4 = (props: Footer4Props) => {
-	const { logo, footerText, columnLinks, footerLinks, socialMediaLinks } = {
+	const { footerText, columnLinks, footerLinks, socialMediaLinks } = {
 		...Footer4Defaults,
 		...props,
 	} as Props;
 	return (
-		<footer className='px-[5%] py-12 md:py-18 lg:py-20'>
+		<footer className='px-[5%] py-12 md:py-18 lg:py-20 w-full'>
 			<div className='container'>
 				<div className='grid grid-cols-1 items-center justify-center justify-items-center gap-x-[4vw] gap-y-12 pb-12 md:pb-18 lg:grid-cols-[0.25fr_1fr_0.25fr] lg:justify-between lg:gap-y-4 lg:pb-20'>
 					<a
-						href={logo.url}
+						href={'/'}
 						className='lg:justify-self-start'>
-						<img
-							src={logo.src}
-							alt={logo.alt}
+						<Image
+							width={280}
+							height={140}
+							src={logo}
+							alt={'logo iceberg digital'}
 							className='inline-block'
 						/>
 					</a>
@@ -70,7 +75,11 @@ export const Footer4 = (props: Footer4Props) => {
 								<li
 									key={linkIndex}
 									className='font-semibold'>
-									<a href={link.url}>{link.title}</a>
+									<a
+										className='hover:text-yellow-500 transition-all duration-200 ease-linear'
+										href={link.url}>
+										{link.title}
+									</a>
 								</li>
 							))}
 						</ul>
@@ -78,6 +87,7 @@ export const Footer4 = (props: Footer4Props) => {
 					<div className='flex items-start justify-start justify-items-center gap-x-3 lg:justify-self-end'>
 						{socialMediaLinks.map((link, index) => (
 							<a
+								className='hover:text-yellow-500 transition-all duration-200 ease-linear'
 								key={index}
 								href={link.url}>
 								{link.icon}
@@ -85,15 +95,19 @@ export const Footer4 = (props: Footer4Props) => {
 						))}
 					</div>
 				</div>
-				<div className='h-px w-full bg-black' />
-				<div className='flex flex-col-reverse items-center justify-center justify-items-center pb-4 pt-6 text-sm md:flex-row md:gap-x-6 md:pb-0 md:pt-8'>
+				<div className='h-px w-full bg-zinc-600/30' />
+				<div className='flex flex-col-reverse items-center justify-center justify-items-center pb-4 pt-6 text-sm md:flex-row md:gap-x-6 md:pb-0 md:pt-8 font-light'>
 					<p className='mt-8 md:mt-0'>{footerText}</p>
 					<ul className='grid grid-flow-row grid-cols-[max-content] items-center justify-center justify-items-center gap-x-0 gap-y-4 text-sm md:grid-flow-col md:gap-x-6 md:gap-y-0'>
 						{footerLinks.map((link, index) => (
 							<li
 								key={index}
-								className='underline decoration-black underline-offset-1 '>
-								<a href={link.url}>{link.title}</a>
+								className='underline underline-offset-1 '>
+								<a
+									className='hover:text-yellow-500 transition-all duration-200 ease-linear'
+									href={link.url}>
+									{link.title}
+								</a>
 							</li>
 						))}
 					</ul>
@@ -112,25 +126,22 @@ export const Footer4Defaults: Footer4Props = {
 	columnLinks: [
 		{
 			links: [
-				{ title: 'Link One', url: '#' },
-				{ title: 'Link Two', url: '#' },
-				{ title: 'Link Three', url: '#' },
-				{ title: 'Link Four', url: '#' },
-				{ title: 'Link Five', url: '#' },
+				{ title: 'Home', url: '/' },
+				{ title: 'Soluções', url: '/#solutions' },
+				{ title: 'Benefícios', url: '/#benefits' },
+				{ title: 'Contato', url: '/#contact' },
 			],
 		},
 	],
 	socialMediaLinks: [
 		{ url: '#', icon: <BiLogoFacebookCircle className='size-6' /> },
 		{ url: '#', icon: <BiLogoInstagram className='size-6' /> },
-		{ url: '#', icon: <FaXTwitter className='size-6 p-0.5' /> },
 		{ url: '#', icon: <BiLogoLinkedinSquare className='size-6' /> },
 		{ url: '#', icon: <BiLogoYoutube className='size-6' /> },
 	],
-	footerText: '© 2024 Relume. All rights reserved.',
+	footerText: '© 2024 Iceberg Digital. Todos Os Direitos Reservados.',
 	footerLinks: [
 		{ title: 'Privacy Policy', url: '#' },
 		{ title: 'Terms of Service', url: '#' },
-		{ title: 'Cookies Settings', url: '#' },
 	],
 };

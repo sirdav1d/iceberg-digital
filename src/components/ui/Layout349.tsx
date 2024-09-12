@@ -51,7 +51,7 @@ export const Layout349 = (props: Layout349Props) => {
 
 	return (
 		<section
-			id='relume'
+			id='benefits'
 			className='px-[5%]'>
 			<div className='container relative grid items-stretch gap-x-12 py-16 sm:gap-y-12 md:grid-cols-2 md:py-0 lg:gap-x-20'>
 				<div className='grid grid-cols-1 gap-12 md:block'>

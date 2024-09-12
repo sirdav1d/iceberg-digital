@@ -30,7 +30,7 @@ export const Layout237 = (props: Layout237Props) => {
 	} as Props;
 	return (
 		<section
-			id='relume'
+			id='solutions'
 			className='px-[5%] py-16 md:py-24 lg:py-28'>
 			<div className='container flex flex-col items-center'>
 				<div className='rb-12 mb-12 text-center md:mb-18 lg:mb-20'>
