@@ -11,6 +11,7 @@ import { fetchHygraph } from '@/lib/fetchHygraph';
 import { HomeQuery } from '@/lib/queries';
 
 export default async function Home() {
+	//@typescript-eslint/no-unused-vars
 	const resp: any = await fetchHygraph(HomeQuery);
 	const data = resp.homepages[0];
 	return (
