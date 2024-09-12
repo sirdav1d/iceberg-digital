@@ -46,7 +46,6 @@ export default function Hero() {
 					</NavigationMenuList>
 				</NavigationMenu>
 			</div>
-
 			<div className='w-full  h-full  flex justify-between items-center'>
 				<div className='flex flex-col gap-5 w-1/2'>
 					<h1 className='text-zinc-50 font-bold text-4xl 2xl:text-7xl relative z-20'>
