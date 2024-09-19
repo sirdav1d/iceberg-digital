@@ -18,11 +18,11 @@ export const Layout237 = (props: Layout237Props) => {
 	return (
 		<section
 			id='solutions'
-			className='px-[5%] py-16 md:py-24 lg:py-28'>
+			className='px-[5%] py-16'>
 			<div className='container flex flex-col items-center'>
 				<div className='rb-12 mb-12 text-center md:mb-18 lg:mb-20'>
 					<div className='w-full max-w-7xl'>
-						<h2 className='rb-5 mb-5 text-3xl font-bold md:mb-6 md:text-5xl lg:text-7xl'>
+						<h2 className='rb-5 mb-5 text-3xl font-bold md:mb-6 md:text-5xl lg:text-7xl max-w-lg'>
 							{heading}
 						</h2>
 					</div>

@@ -41,10 +41,10 @@ export const Layout349 = (props: Layout349Props) => {
 					{contents.map((content, index) => (
 						<div key={index}>
 							<div className='flex flex-col items-start justify-center md:h-screen'>
-								<h2 className='rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl'>
+								<h2 className='rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl max-w-md capitalize'>
 									{content.title}
 								</h2>
-								<p className='md:text-md'>{content.description}</p>
+								<p className='md:text-lg'>{content.description}</p>
 
 								<div className='mt-10 block w-full md:hidden'>
 									<Image
@@ -71,13 +71,13 @@ export const Layout349 = (props: Layout349Props) => {
 				<div className='sticky top-0 hidden h-screen md:flex md:flex-col md:items-center md:justify-center'>
 					{contents.map((content, index) => (
 						<Image
-							width={400}
+							width={440}
 							height={400}
 							key={index}
 							src={content.image.url}
 							className={clsx('absolute w-full', {
-								'opacity-100': activeSection === index + 2,
-								'opacity-0': activeSection !== index + 2,
+								'opacity-100': activeSection === index + 1,
+								'opacity-0': activeSection !== index + 1,
 							})}
 							alt={'Imagem ilustrativa'}
 						/>

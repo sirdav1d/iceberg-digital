@@ -16,7 +16,7 @@ export default async function Home() {
 	const resp: THomepage = await fetchHygraph(HomeQuery);
 	const data = resp.homepages[0];
 	return (
-		<main className='flex flex-col items-center justify-start min-h-screen'>
+		<main className='flex flex-col items-center justify-start overflow-x-hidden md:overflow-visible'>
 			<Hero
 				logoNav={{
 					url: data.logoNav.url,
@@ -29,13 +29,19 @@ export default async function Home() {
 				}}
 			/>
 			<LogoList3 heading='Empresas Que Confiam Em Nosso Trabalho' />
+			<Layout349 contents={data.benefits} />
 			<Layout237
 				heading={data.featureTitle}
 				sections={data.features}
 			/>
-			<Layout349 contents={data.benefits} />
+
 			<Testimonial7 />
-			<Contact5 />
+			<Contact5
+				email='comercial@icebergdigital.com.br'
+				phone='+55 41 98724-1092'
+				heading='Fale Conosco'
+				description='Entre em Contato e Descubra Como Podemos Fortalecer Sua Presença Digital e Impulsionar Seu Sucesso'
+			/>
 			<Footer4 />
 		</main>
 	);

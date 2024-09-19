@@ -22,17 +22,15 @@ export const LogoList3 = (props: Logo3Props) => {
 		...props,
 	} as Props;
 	return (
-		<section
-			id='relume'
-			className='overflow-hidden py-12 md:py-16 lg:py-20'>
-			<div className=' flex mb-8 w-full items-center justify-start gap-2  px-[5%] md:mb-10 lg:mb-12 relative '>
-				<h1 className='text-base font-bold leading-[1.2] md:text-md md:leading-[1.2] '>
+		<section className='overflow-hidden py-12'>
+			<div className=' flex mb-8 items-center justify-start gap-2  px-[5%] md:mb-10 lg:mb-12 relative w-fit xl:w-full mx-auto'>
+				<h2 className=' font-bold leading-[1.2]  md:leading-[1.2] text-sm md:text-base'>
 					{heading}
-				</h1>
+				</h2>
 				<Image
+					className='hidden md:block'
 					src={arrow}
 					alt={'arrow'}></Image>
-				<span className='h-[2px] w-[80px] bg-zinc-950 absolute left-0 rounded-full' />
 			</div>
 			<div className='flex items-center pt-7 md:pt-0'>
 				{Array(2)
