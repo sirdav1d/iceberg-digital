@@ -50,4 +50,5 @@ export type ContentHomepage = {
 	features: HygraphFeature[];
 	benefitsTitle: string;
 	benefits: HygraphBenefit[];
+	logoList: HygraphImage[];
 };

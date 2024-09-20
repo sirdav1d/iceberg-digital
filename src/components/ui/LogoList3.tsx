@@ -2,15 +2,11 @@
 
 import Image from 'next/image';
 import arrow from '@/assets/arrow.svg';
-
-type ImageProps = {
-	src: string;
-	alt?: string;
-};
+import { HygraphImage } from '@/lib/types';
 
 type Props = {
 	heading: string;
-	logos: ImageProps[];
+	logos: HygraphImage[];
 };
 
 export type Logo3Props = React.ComponentPropsWithoutRef<'section'> &
@@ -18,7 +14,6 @@ export type Logo3Props = React.ComponentPropsWithoutRef<'section'> &
 
 export const LogoList3 = (props: Logo3Props) => {
 	const { heading, logos } = {
-		...Logo3Defaults,
 		...props,
 	} as Props;
 	return (
@@ -28,7 +23,7 @@ export const LogoList3 = (props: Logo3Props) => {
 					{heading}
 				</h2>
 				<Image
-					className='hidden md:block'
+					className='hidden md:block '
 					src={arrow}
 					alt={'arrow'}></Image>
 			</div>
@@ -41,11 +36,11 @@ export const LogoList3 = (props: Logo3Props) => {
 							className='flex shrink-0 animate-loop-horizontally items-center'>
 							{logos.map((logo, index) => (
 								<Image
-									width={100}
+									width={120}
 									height={64}
 									key={index}
-									className='mx-7 max-h-12 shrink-0 md:mx-10 md:max-h-14'
-									src={logo.src}
+									className='mx-7 max-h-12 shrink-0 md:mx-10 md:max-h-14 grayscale hover:grayscale-0 transition-all ease-linear duration-200'
+									src={logo.url}
 									alt={'logos'}
 								/>
 							))}
@@ -54,42 +49,4 @@ export const LogoList3 = (props: Logo3Props) => {
 			</div>
 		</section>
 	);
-};
-
-export const Logo3Defaults: Logo3Props = {
-	heading: "Used by the world's most average companies",
-	logos: [
-		{
-			src: 'https://d22po4pjz3o32e.cloudfront.net/webflow-logo.svg',
-			alt: 'Webflow logo 1',
-		},
-		{
-			src: 'https://d22po4pjz3o32e.cloudfront.net/relume-logo.svg',
-			alt: 'Relume logo 1',
-		},
-		{
-			src: 'https://d22po4pjz3o32e.cloudfront.net/webflow-logo.svg',
-			alt: 'Webflow logo 2',
-		},
-		{
-			src: 'https://d22po4pjz3o32e.cloudfront.net/relume-logo.svg',
-			alt: 'Relume logo 2',
-		},
-		{
-			src: 'https://d22po4pjz3o32e.cloudfront.net/webflow-logo.svg',
-			alt: 'Webflow logo 3',
-		},
-		{
-			src: 'https://d22po4pjz3o32e.cloudfront.net/relume-logo.svg',
-			alt: 'Relume logo 3',
-		},
-		{
-			src: 'https://d22po4pjz3o32e.cloudfront.net/webflow-logo.svg',
-			alt: 'Webflow logo 4',
-		},
-		{
-			src: 'https://d22po4pjz3o32e.cloudfront.net/relume-logo.svg',
-			alt: 'Relume logo 4',
-		},
-	],
 };

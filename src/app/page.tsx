@@ -28,7 +28,7 @@ export default async function Home() {
 					url: data.imageHero.url,
 				}}
 			/>
-			<LogoList3 heading='Empresas Que Confiam Em Nosso Trabalho' />
+			<LogoList3 heading='Empresas Que Confiam Em Nosso Trabalho' logos={data.logoList} />
 			<Layout349 contents={data.benefits} />
 			<Layout237
 				heading={data.featureTitle}
