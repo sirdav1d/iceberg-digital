@@ -26,7 +26,7 @@ export const Contact5 = (props: Contact5Props) => {
 			className='px-[5%] py-16'>
 			<div className='container flex flex-col justify-center items-center gap-y-12'>
 				<div>
-					<div className='rb-6 mb-6 md:mb-8 text-center max-w-lg'>
+					<div className='rb-6 mb-6 md:mb-8 text-center max-w-md'>
 						<h2 className='rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl'>
 							{heading}
 						</h2>

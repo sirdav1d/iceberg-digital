@@ -73,7 +73,7 @@ export const Footer4 = (props: Footer4Props) => {
 							{column.links.map((link, linkIndex) => (
 								<li
 									key={linkIndex}
-									className='font-semibold'>
+									className='font-normal'>
 									<a
 										className='hover:text-yellow-500 transition-all duration-200 ease-linear'
 										href={link.url}>
@@ -121,8 +121,8 @@ export const Footer4Defaults: Footer4Props = {
 		{
 			links: [
 				{ title: 'Home', url: '/#home' },
-				{ title: 'Soluções', url: '/#solutions' },
 				{ title: 'Benefícios', url: '/#benefits' },
+				{ title: 'Soluções', url: '/#solutions' },
 				{ title: 'Contato', url: '/#contact' },
 			],
 		},
@@ -135,7 +135,7 @@ export const Footer4Defaults: Footer4Props = {
 	],
 	footerText: '© 2024 Iceberg Digital. Todos Os Direitos Reservados.',
 	footerLinks: [
-		{ title: 'Políticas de Privacidade', url: '#' },
-		{ title: 'Termos de Uso', url: '#' },
+		{ title: 'Políticas de Privacidade', url: '/politics' },
+		{ title: 'Termos de Uso', url: '/politics' },
 	],
 };
