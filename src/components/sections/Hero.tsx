@@ -22,10 +22,15 @@ export default function Hero(props: THero) {
 						<p className='text-zinc-200 font-normal max-w-md text-lg xxl:text-xl'>
 							{props.subheadline}
 						</p>
-						<Button className='mt-5 w-fit text-lg 2xl:text-xl hover:shadow-lg group px-5'>
-							{props.ctaHero}
-							<MoveRight className='group-hover:translate-x-1 transition-all duration-200 ease-linear' />
-						</Button>
+						<a
+							href='https://typebot.co/my-typebot-okmrw5c'
+							target='_blank'
+							rel='noopener noreferrer'>
+							<Button className='mt-5 w-fit text-lg 2xl:text-xl hover:shadow-lg group px-5'>
+								{props.ctaHero}
+								<MoveRight className='group-hover:translate-x-1 transition-all duration-200 ease-linear' />
+							</Button>
+						</a>
 					</div>
 					<div className='w-full md:w-1/2 z-20'>
 						<Image

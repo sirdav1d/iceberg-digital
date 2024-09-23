@@ -34,11 +34,11 @@ export default async function Home() {
 				heading='Empresas Que Confiam Em Nosso Trabalho'
 				logos={data.logoList}
 			/>
-			<Layout349 contents={data.benefits} />
 			<Layout237
 				heading={data.featureTitle}
 				sections={data.features}
 			/>
+			<Layout349 contents={data.benefits} />
 
 			<Testimonial7 />
 			<Contact5

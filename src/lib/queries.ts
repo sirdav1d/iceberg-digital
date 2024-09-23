@@ -23,6 +23,11 @@ export const HomeQuery = `query MyQuery {
       image {
         url
       }
+      icon {
+        html
+        raw
+      }
+      iconSvg
     }
     benefitsTitle
     benefits {

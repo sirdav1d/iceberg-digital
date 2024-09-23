@@ -11,14 +11,15 @@ export default function MyBubble() {
 			<Bubble
 				typebot='my-typebot-okmrw5c'
 				theme={{
-					button: { backgroundColor: '#276C69', size: 'large' },
-					chatWindow: { backgroundColor: '#276C69' },
+					button: { backgroundColor: '#fbe505', size: 'medium' },
+					chatWindow: { backgroundColor: '#fbe505' },
 					previewMessage: {
-						backgroundColor: '#276C69',
+						backgroundColor: '#fbe505',
 						textColor: '#276C69',
 						closeButtonBackgroundColor: '#276C69',
 						closeButtonIconColor: '#276C69',
 					},
+					placement: 'left',
 				}}
 			/>
 		</>

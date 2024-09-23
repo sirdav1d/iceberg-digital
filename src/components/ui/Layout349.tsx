@@ -38,15 +38,17 @@ export const Layout349 = (props: Layout349Props) => {
 			className='px-[5%]'>
 			<div className='container relative grid items-stretch gap-x-12 py-16 sm:gap-y-12 md:grid-cols-2 md:py-0 lg:gap-x-20'>
 				<div className='grid grid-cols-1 gap-12 md:block'>
+					<h2 className='absolute text-4xl md:text-6xl lg:text-8xl font-bold top-0 md:top-20 w-full text-center '>
+						Nossos Diferenciais
+					</h2>
 					{contents.map((content, index) => (
 						<div key={index}>
 							<div className='flex flex-col items-start justify-center md:h-screen'>
-								<h2 className='rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl max-w-md capitalize'>
+								<h2 className='rb-5 my-5 text-2xl font-bold md:mb-6 md:text-5xl max-w-md capitalize'>
 									{content.title}
 								</h2>
 								<p className='md:text-lg'>{content.description}</p>
-
-								<div className='mt-10 block w-full md:hidden'>
+								<div className='mt-5 block w-full md:hidden'>
 									<Image
 										width={400}
 										height={400}
@@ -76,8 +78,8 @@ export const Layout349 = (props: Layout349Props) => {
 							key={index}
 							src={content.image.url}
 							className={clsx('absolute w-full', {
-								'opacity-100': activeSection === index + 1,
-								'opacity-0': activeSection !== index + 1,
+								'opacity-100': activeSection === index + 2,
+								'opacity-0': activeSection !== index + 2,
 							})}
 							alt={'Imagem ilustrativa'}
 						/>

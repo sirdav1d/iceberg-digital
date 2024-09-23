@@ -1,5 +1,7 @@
 /** @format */
 
+import { RichTextContent } from '@graphcms/rich-text-types';
+
 export type THero = {
 	logoNav: HygraphImage;
 	headline: string;
@@ -27,6 +29,8 @@ export type HygraphFeature = {
 	title: string;
 	description: string;
 	image: HygraphImage;
+	icon: IconHygraph;
+	iconSvg: string;
 };
 
 export type HygraphBenefit = {
@@ -51,4 +55,9 @@ export type ContentHomepage = {
 	benefitsTitle: string;
 	benefits: HygraphBenefit[];
 	logoList: HygraphImage[];
+};
+
+export type IconHygraph = {
+	raw: RichTextContent;
+	html: RichTextContent;
 };

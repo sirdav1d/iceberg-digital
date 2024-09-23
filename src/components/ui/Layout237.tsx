@@ -1,7 +1,7 @@
 /** @format */
 
 import { HygraphFeature } from '@/lib/types';
-import Image from 'next/image';
+import { CMSIcon } from './CMSIcon';
 
 type Props = {
 	heading: string;
@@ -31,19 +31,9 @@ export const Layout237 = (props: Layout237Props) => {
 					{sections.map((section, index) => (
 						<div
 							key={index}
-							className={`${
-								section.title == 'Gestão de Tráfego'
-									? 'bg-brand-green-500 text-zinc-50 scale-105'
-									: ''
-							} flex w-full flex-col items-start p-4 rounded-lg shadow-medium`}>
-							<div className='rb-5 mb-5 md:mb-6'>
-								<Image
-									width={40}
-									height={40}
-									src={section.image.url}
-									className='size-12'
-									alt={'icon'}
-								/>
+							className={`hover:bg-brand-green-500 group hover:scale-110 hover:text-zinc-50 h-full transition-all ease-linear duration-200 flex w-full flex-col items-start p-5 rounded-lg shadow-medium`}>
+							<div className='mb-5 ml-1 scale-150'>
+								<CMSIcon icon={section.iconSvg}></CMSIcon>
 							</div>
 							<h3 className='mb-5 text-xl font-bold md:mb-6 md:text-2xl md:leading-[1.3] lg:text-3xl'>
 								{section.title}

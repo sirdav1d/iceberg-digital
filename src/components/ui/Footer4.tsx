@@ -7,7 +7,7 @@ import {
 	BiLogoYoutube,
 } from 'react-icons/bi';
 
-import logo from '@/assets/logo-dark.png';
+import logo from '@/assets/logo.png';
 import Image from 'next/image';
 
 type ImageProps = {
@@ -52,18 +52,18 @@ export const Footer4 = (props: Footer4Props) => {
 		...props,
 	} as Props;
 	return (
-		<footer className='px-[5%] py-12 md:py-18 lg:py-20 w-full'>
+		<footer className='px-[5%] py-12 md:py-18 lg:py-20 w-full bg-zinc-800 text-zinc-50'>
 			<div className='container'>
 				<div className='grid grid-cols-1 items-center justify-center justify-items-center gap-x-[4vw] gap-y-12 pb-12 md:pb-18 lg:grid-cols-[0.25fr_1fr_0.25fr] lg:justify-between lg:gap-y-4 lg:pb-20'>
 					<a
 						href={'/'}
 						className='lg:justify-self-start'>
 						<Image
-							width={320}
-							height={160}
+							width={440}
+							height={280}
 							src={logo}
 							alt={'logo iceberg digital'}
-							className='inline-block lg:scale-125'
+							className='inline-block lg:scale-150'
 						/>
 					</a>
 					{columnLinks.map((column, index) => (
@@ -75,7 +75,7 @@ export const Footer4 = (props: Footer4Props) => {
 									key={linkIndex}
 									className='font-normal'>
 									<a
-										className='hover:text-yellow-500 transition-all duration-200 ease-linear'
+										className='hover:text-yellow-400 transition-all duration-200 ease-linear'
 										href={link.url}>
 										{link.title}
 									</a>
@@ -86,7 +86,7 @@ export const Footer4 = (props: Footer4Props) => {
 					<div className='flex items-start justify-start justify-items-center gap-x-3 lg:justify-self-end'>
 						{socialMediaLinks.map((link, index) => (
 							<a
-								className='hover:text-yellow-500 transition-all duration-200 ease-linear'
+								className='hover:text-yellow-400 transition-all duration-200 ease-linear'
 								key={index}
 								href={link.url}>
 								{link.icon}
@@ -103,7 +103,7 @@ export const Footer4 = (props: Footer4Props) => {
 								key={index}
 								className='underline underline-offset-1 '>
 								<a
-									className='hover:text-yellow-500 transition-all duration-200 ease-linear'
+									className='hover:text-yellow-400 transition-all duration-200 ease-linear'
 									href={link.url}>
 									{link.title}
 								</a>

@@ -19,7 +19,7 @@ export const LogoList3 = (props: Logo3Props) => {
 	return (
 		<section className='overflow-hidden py-8'>
 			<div className=' flex mb-8 items-center justify-start gap-2  px-[5%] relative w-fit xl:w-full mx-auto'>
-				<h2 className=' font-bold leading-[1.2]  md:leading-[1.2] text-sm md:text-base'>
+				<h2 className=' font-bold leading-[1.2]  md:leading-[1.2] text-base md:text-lg'>
 					{heading}
 				</h2>
 				<Image
