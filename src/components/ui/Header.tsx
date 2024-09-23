@@ -64,13 +64,18 @@ export default function Header(props: { url: string }) {
 						</NavigationMenuItem>
 					</NavigationMenuList>
 				</NavigationMenu>
-				<Button className=' w-fit text-base 2xl:text-lg hover:shadow-lg group px-5'>
-					Whatsapp
-					<IoLogoWhatsapp
-						size={28}
-						className='group-hover:translate-x-1 transition-all duration-200 ease-linear'
-					/>
-				</Button>
+				<a
+					href='https://wa.me/554187241092?text=Ol%C3%A1,%20estava%20navegando%20em%20seu%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento'
+					target='_blank'
+					rel='noopener noreferrer'>
+					<Button className=' w-fit text-base 2xl:text-lg hover:shadow-lg group px-5'>
+						Whatsapp
+						<IoLogoWhatsapp
+							size={28}
+							className='group-hover:translate-x-1 transition-all duration-200 ease-linear'
+						/>
+					</Button>
+				</a>
 			</div>
 			<div className='flex md:hidden h-full'>
 				<Sheet>
@@ -124,13 +129,18 @@ export default function Header(props: { url: string }) {
 						</div>
 						<SheetFooter>
 							<SheetClose asChild>
-								<Button className=' w-full text-lg hover:shadow-lg group px-5'>
-									Whatsapp
-									<IoLogoWhatsapp
-										size={28}
-										className='group-hover:translate-x-1 transition-all duration-200 ease-linear'
-									/>
-								</Button>
+								<a
+									href='https://wa.me/554187241092?text=Ol%C3%A1,%20estava%20navegando%20em%20seu%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento'
+									target='_blank'
+									rel='noopener noreferrer'>
+									<Button className=' w-full text-lg hover:shadow-lg group px-5'>
+										Whatsapp
+										<IoLogoWhatsapp
+											size={28}
+											className='group-hover:translate-x-1 transition-all duration-200 ease-linear'
+										/>
+									</Button>
+								</a>
 							</SheetClose>
 						</SheetFooter>
 					</SheetContent>
