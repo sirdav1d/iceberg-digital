@@ -57,7 +57,7 @@ export const Testimonial7 = (props: Testimonial7Props) => {
 	return (
 		<section
 			id='relume'
-			className='overflow-hidden px-[5%] py-16 md:py-24 lg:py-28'>
+			className='overflow-hidden px-[5%] py-16'>
 			<div className='container'>
 				{/* for all available options: https://www.embla-carousel.com/api/options/ */}
 				<Carousel

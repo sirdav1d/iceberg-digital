@@ -6,6 +6,7 @@ import { Footer4 } from '@/components/ui/Footer4';
 import { Layout237 } from '@/components/ui/Layout237';
 import { Layout349 } from '@/components/ui/Layout349';
 import { LogoList3 } from '@/components/ui/LogoList3';
+import MyBubble from '@/components/ui/MyBubble';
 import { Testimonial7 } from '@/components/ui/Testimonial7';
 import { fetchHygraph } from '@/lib/fetchHygraph';
 import { HomeQuery } from '@/lib/queries';
@@ -17,6 +18,7 @@ export default async function Home() {
 	const data = resp.homepages[0];
 	return (
 		<main className='flex flex-col items-center justify-start overflow-x-hidden md:overflow-visible'>
+			<MyBubble></MyBubble>
 			<Hero
 				logoNav={{
 					url: data.logoNav.url,
@@ -28,7 +30,10 @@ export default async function Home() {
 					url: data.imageHero.url,
 				}}
 			/>
-			<LogoList3 heading='Empresas Que Confiam Em Nosso Trabalho' logos={data.logoList} />
+			<LogoList3
+				heading='Empresas Que Confiam Em Nosso Trabalho'
+				logos={data.logoList}
+			/>
 			<Layout349 contents={data.benefits} />
 			<Layout237
 				heading={data.featureTitle}
