@@ -63,8 +63,8 @@ export const Testimonial7 = (props: Testimonial7Props) => {
 								</CarouselItem>
 							))}
 						</CarouselContent>
-						<CarouselPrevious className='mt-8 hidden bg-white md:flex md:size-14' />
-						<CarouselNext className='mt-8 hidden bg-white md:flex md:size-14' />
+						<CarouselPrevious className='mt-8 hidden bg-white md:flex md:size-14 hover:bg-brand-gold-400 hover:border-brand-gold-500 transition-all ease-linear duration-200' />
+						<CarouselNext className='mt-8 hidden bg-white md:flex md:size-14 hover:bg-brand-gold-400 hover:border-brand-gold-500 transition-all ease-linear duration-200' />
 					</div>
 					<div className='mt-[30px] flex items-center justify-center md:mt-[46px]'>
 						{testimonials.map((_, index) => (

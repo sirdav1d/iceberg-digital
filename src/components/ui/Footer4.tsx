@@ -121,8 +121,8 @@ export const Footer4Defaults: Footer4Props = {
 		{
 			links: [
 				{ title: 'Home', url: '/#home' },
-				{ title: 'Benefícios', url: '/#benefits' },
 				{ title: 'Soluções', url: '/#solutions' },
+				{ title: 'Benefícios', url: '/#benefits' },
 				{ title: 'Contato', url: '/#contact' },
 			],
 		},

@@ -43,16 +43,16 @@ export default function Header(props: { url: string }) {
 						</NavigationMenuItem>
 						<NavigationMenuItem>
 							<NavigationMenuLink
-								href='#benefits'
+								href='#solutions'
 								className='hover:text-brand-gold-500 transition-all duration-200 ease-linear'>
-								Benefícios
+								Soluções
 							</NavigationMenuLink>
 						</NavigationMenuItem>
 						<NavigationMenuItem>
 							<NavigationMenuLink
-								href='#solutions'
+								href='#benefits'
 								className='hover:text-brand-gold-500 transition-all duration-200 ease-linear'>
-								Soluções
+								Benefícios
 							</NavigationMenuLink>
 						</NavigationMenuItem>
 						<NavigationMenuItem>
