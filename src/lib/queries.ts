@@ -38,5 +38,17 @@ export const HomeQuery = `query MyQuery {
         url
       }
     }
+    testimonials {
+      id
+      name
+      position
+      testimonialDescription
+      logo {
+        url
+      }
+      avatar {
+        url
+      }
+    }
   }
 }`;

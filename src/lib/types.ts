@@ -55,9 +55,19 @@ export type ContentHomepage = {
 	benefitsTitle: string;
 	benefits: HygraphBenefit[];
 	logoList: HygraphImage[];
+	testimonials: Testimonial[];
 };
 
 export type IconHygraph = {
 	raw: RichTextContent;
 	html: RichTextContent;
+};
+
+export type Testimonial = {
+	id: string;
+	name: string;
+	position: string;
+	testimonialDescription: string;
+	logo: HygraphImage;
+	avatar: HygraphImage;
 };

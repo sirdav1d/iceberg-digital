@@ -18,7 +18,7 @@ export default async function Home() {
 	const data = resp.homepages[0];
 	return (
 		<main className='flex flex-col items-center justify-start overflow-x-hidden md:overflow-visible'>
-			<MyBubble></MyBubble>
+			<MyBubble />
 			<Hero
 				logoNav={{
 					url: data.logoNav.url,
@@ -40,7 +40,7 @@ export default async function Home() {
 			/>
 			<Layout349 contents={data.benefits} />
 
-			<Testimonial7 />
+			<Testimonial7 testimonials={data.testimonials} />
 			<Contact5
 				email='comercial@icebergdigital.com.br'
 				phone='+55 41 98724-1092'
