@@ -18,8 +18,8 @@ export const Layout237 = (props: Layout237Props) => {
 	return (
 		<section
 			id='solutions'
-			className='px-[5%] py-16'>
-			<div className='container flex flex-col items-center'>
+			className='px-[5%] py-16 w-full mx-auto '>
+			<div className='container flex flex-col items-center w-full '>
 				<div className='rb-12 mb-12 text-center md:mb-18 lg:mb-20'>
 					<div className='w-full max-w-7xl'>
 						<h2 className='rb-5 mb-5 text-3xl font-bold md:mb-6 md:text-5xl lg:text-7xl max-w-lg'>
@@ -27,7 +27,7 @@ export const Layout237 = (props: Layout237Props) => {
 						</h2>
 					</div>
 				</div>
-				<div className='grid grid-cols-1 items-start justify-center gap-y-12 md:grid-cols-3 md:gap-x-8 md:gap-y-16 lg:gap-x-12'>
+				<div className='grid grid-cols-1 items-start w-full justify-center gap-y-12 md:grid-cols-2 lg:grid-cols-3 md:gap-x-8 md:gap-y-16 lg:gap-x-12'>
 					{sections.map((section, index) => (
 						<div
 							key={index}

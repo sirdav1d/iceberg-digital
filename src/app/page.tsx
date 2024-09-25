@@ -17,7 +17,7 @@ export default async function Home() {
 	const resp: THomepage = await fetchHygraph(HomeQuery);
 	const data = resp.homepages[0];
 	return (
-		<main className='flex flex-col items-center justify-start overflow-x-hidden md:overflow-visible'>
+		<main className='flex flex-col items-center justify-center w-full overflow-x-hidden md:overflow-visible'>
 			<MyBubble />
 			<Hero
 				logoNav={{

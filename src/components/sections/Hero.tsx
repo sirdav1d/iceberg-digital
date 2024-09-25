@@ -13,8 +13,8 @@ export default function Hero(props: THero) {
 			className='max-w-full min-h-full bg-brand-green-600 md:m-5 flex flex-col items-center px-4 py-10 md:px-14 md:py-14 shadow-xlarge gap-14 md:rounded-xl '>
 			<>
 				<Header url={props.logoNav.url} />
-				<div className='w-full h-full  flex justify-between items-center flex-col md:flex-row gap-20'>
-					<div className='flex flex-col gap-5 md:w-2/3'>
+				<div className='w-full h-full  flex justify-between items-center flex-col lg:flex-row gap-20'>
+					<div className='flex flex-col gap-5 lg:w-2/3'>
 						<h1 className='text-zinc-50 font-bold text-5xl md:text-7xl xxl:text-10xl relative z-20'>
 							{props.headline}
 							<span className='bg-brand-yellow-500 rounded-full w-24 h-24 absolute blur-3xl top-10 right-10 xl:-right-40 z-10' />
@@ -32,7 +32,7 @@ export default function Hero(props: THero) {
 							</Button>
 						</a>
 					</div>
-					<div className='w-full md:w-1/2 z-20'>
+					<div className='w-full lg:w-1/2 z-20'>
 						<Image
 							width={500}
 							height={400}

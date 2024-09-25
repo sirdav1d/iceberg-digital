@@ -24,7 +24,7 @@ export const Layout349 = (props: Layout349Props) => {
 	useEffect(() => {
 		const handleScroll = () => {
 			const sectionHeight = window.innerHeight;
-			const currentScrollPosition = window.scrollY + sectionHeight / 2;
+			const currentScrollPosition = window.scrollY + sectionHeight / 10;
 			const currentSection = Math.floor(currentScrollPosition / sectionHeight);
 			setActiveSection(currentSection);
 		};
@@ -36,19 +36,19 @@ export const Layout349 = (props: Layout349Props) => {
 		<section
 			id='benefits'
 			className='px-[5%]'>
-			<div className='container relative grid items-stretch gap-x-12 py-16 sm:gap-y-12 md:grid-cols-2 md:py-0 lg:gap-x-20'>
+			<div className='container relative grid items-stretch gap-x-12 py-16 sm:gap-y-12 lg:grid-cols-2 lg:py-0 lg:gap-x-20'>
 				<div className='grid grid-cols-1 gap-12 md:block'>
 					<h2 className='absolute text-4xl md:text-6xl lg:text-8xl font-bold top-0 md:top-20 w-full text-center '>
 						Nossos Diferenciais
 					</h2>
 					{contents.map((content, index) => (
 						<div key={index}>
-							<div className='flex flex-col items-start justify-center md:h-screen'>
-								<h2 className='rb-5 my-5 text-2xl font-bold md:mb-6 md:text-5xl max-w-md capitalize'>
+							<div className='flex flex-col items-start justify-center lg:h-screen'>
+								<h2 className='rb-5 my-5 text-2xl font-bold md:mb-6 md:text-4xl lg:text-6xl capitalize'>
 									{content.title}
 								</h2>
 								<p className='md:text-lg'>{content.description}</p>
-								<div className='mt-5 block w-full md:hidden'>
+								<div className='block w-full lg:hidden'>
 									<Image
 										width={400}
 										height={400}
@@ -60,7 +60,7 @@ export const Layout349 = (props: Layout349Props) => {
 							</div>
 							<div
 								className={clsx(
-									'fixed inset-0 -z-10 bg-[#e5e5e5] transition-opacity duration-300',
+									'fixed inset-0 -z-10 bg-zinc-300/10 transition-opacity duration-300',
 									{
 										'opacity-100': activeSection === 3 || activeSection === 5,
 										'opacity-0': activeSection !== 3 && activeSection !== 5,
@@ -70,7 +70,7 @@ export const Layout349 = (props: Layout349Props) => {
 						</div>
 					))}
 				</div>
-				<div className='sticky top-0 hidden h-screen md:flex md:flex-col md:items-center md:justify-center'>
+				<div className='sticky top-0 hidden h-screen lg:flex md:flex-col md:items-center md:justify-center'>
 					{contents.map((content, index) => (
 						<Image
 							width={440}

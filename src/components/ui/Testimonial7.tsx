@@ -41,9 +41,7 @@ export const Testimonial7 = (props: Testimonial7Props) => {
 	}, [api]);
 
 	return (
-		<section
-			id='relume'
-			className='overflow-hidden px-[5%] py-16'>
+		<section className='overflow-hidden px-[5%] py-16'>
 			<div className='container'>
 				{/* for all available options: https://www.embla-carousel.com/api/options/ */}
 				<Carousel
@@ -89,16 +87,16 @@ export const Testimonial7 = (props: Testimonial7Props) => {
 
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
 	return (
-		<div className='container max-w-lg'>
-			<div className='flex flex-col items-center text-center'>
+		<div className='container max-w-lg '>
+			<div className='flex flex-col items-center text-center '>
 				<Image
 					width={240}
 					height={44}
 					src={testimonial.logo.url}
 					alt={testimonial.position}
-					className='object-contain'
+					className='w-48 lg:w-52 xxl:w-60 object-contain'
 				/>
-				<blockquote className='my-6 text-xl font-semibold md:my-8 md:text-2xl'>
+				<blockquote className='my-6 text-xl font-semibold md:my-8 md:text-2xl  max-w-xs md:max-w-full px-4'>
 					{testimonial.testimonialDescription}
 				</blockquote>
 				<div className='flex flex-col items-center justify-center'>

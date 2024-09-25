@@ -23,7 +23,7 @@ export const Contact5 = (props: Contact5Props) => {
 	return (
 		<section
 			id='contact'
-			className='px-[5%] py-16'>
+			className='px-[5%] py-16 xl:py-24'>
 			<div className='container flex flex-col justify-center items-center gap-y-12'>
 				<div>
 					<div className='rb-6 mb-6 md:mb-8 text-center max-w-md'>

@@ -23,7 +23,7 @@ import logodark from '@/assets/logo-dark.png';
 export default function Header(props: { url: string }) {
 	return (
 		<section className='flex justify-between w-full items-center'>
-			<div className='flex flex-col md:flex-row items-center justify-between'>
+			<div className='flex flex-col lg:flex-row items-center justify-between'>
 				<a href='/'>
 					<Image
 						className='w-[220px] md:w-[300px]'
@@ -33,7 +33,7 @@ export default function Header(props: { url: string }) {
 						alt='logo Iceberg Digital '></Image>
 				</a>
 			</div>
-			<div className='md:flex gap-5 hidden'>
+			<div className='lg:flex gap-5 hidden'>
 				<NavigationMenu>
 					<NavigationMenuList className='text-zinc-100 gap-5 hover:text-gold-500 cursor-pointer '>
 						<NavigationMenuItem>
@@ -77,7 +77,7 @@ export default function Header(props: { url: string }) {
 					</Button>
 				</a>
 			</div>
-			<div className='flex md:hidden h-full'>
+			<div className='flex lg:hidden h-full'>
 				<Sheet>
 					<SheetTrigger asChild>
 						<AlignJustify
@@ -87,8 +87,11 @@ export default function Header(props: { url: string }) {
 					</SheetTrigger>
 					<SheetContent className='h-full flex flex-col gap-5 justify-between'>
 						<SheetHeader className='mt-10'>
-							<a href='/'>
+							<a
+								href='/'
+								className=''>
 								<Image
+									className='w-full'
 									src={logodark}
 									width={260}
 									height={200}
@@ -127,13 +130,14 @@ export default function Header(props: { url: string }) {
 								</NavigationMenuList>
 							</NavigationMenu>
 						</div>
-						<SheetFooter>
+						<SheetFooter className=''>
 							<SheetClose asChild>
 								<a
+									className=' w-full'
 									href='https://wa.me/554187241092?text=Ol%C3%A1,%20estava%20navegando%20em%20seu%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento'
 									target='_blank'
 									rel='noopener noreferrer'>
-									<Button className=' w-full text-lg hover:shadow-lg group px-5'>
+									<Button className=' w-full text-lg hover:shadow-lg group px-5 mx-auto '>
 										Whatsapp
 										<IoLogoWhatsapp
 											size={28}
