@@ -90,7 +90,9 @@ export const Layout349 = (props: Layout349Props) => {
 				</div>
 				<div className='sticky top-0 hidden h-screen lg:flex md:flex-col md:items-center md:justify-center'>
 					{contents.map((content, index) => (
-						<AnimatePresence mode='wait'>
+						<AnimatePresence
+							key={index}
+							mode='wait'>
 							{activeSection === index + 2 && (
 								<motion.img
 									initial={{ opacity: 0 }}
