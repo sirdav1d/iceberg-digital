@@ -3,6 +3,7 @@
 'use client';
 
 import { BiEnvelope, BiPhone } from 'react-icons/bi';
+import { motion } from 'framer-motion';
 
 type Props = {
 	heading: string;
@@ -27,21 +28,43 @@ export const Contact5 = (props: Contact5Props) => {
 			<div className='container flex flex-col justify-center items-center gap-y-12'>
 				<div>
 					<div className='rb-6 mb-6 md:mb-8 text-center max-w-md'>
-						<h2 className='rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl'>
+						<motion.h2
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0, duration: 0.3 }}
+							exit={{ opacity: 0 }}
+							className='rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl'>
 							{heading}
-						</h2>
-						<p className='md:text-md'>{description}</p>
+						</motion.h2>
+						<motion.p
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.2, duration: 0.3 }}
+							exit={{ opacity: 0 }}
+							className='md:text-md'>
+							{description}
+						</motion.p>
 					</div>
 
 					<div className='flex flex-col  justify-between items-center gap-4 py-2'>
-						<div className='flex items-center gap-4 md:text-lg font-bold'>
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.3, duration: 0.3 }}
+							exit={{ opacity: 0 }}
+							className='flex items-center gap-4 md:text-lg font-bold'>
 							<BiEnvelope className='size-8 flex-none' />
 							<p>{email}</p>
-						</div>
-						<div className='flex items-center gap-4 md:text-lg font-bold'>
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.4, duration: 0.3 }}
+							exit={{ opacity: 0 }}
+							className='flex items-center gap-4 md:text-lg font-bold'>
 							<BiPhone className='size-8 flex-none' />
 							<p>{phone}</p>
-						</div>
+						</motion.div>
 					</div>
 				</div>
 			</div>

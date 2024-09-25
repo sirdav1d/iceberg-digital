@@ -14,6 +14,7 @@ import {
 import clsx from 'clsx';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 type Props = {
 	testimonials: Testimonial[];
@@ -89,30 +90,53 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
 	return (
 		<div className='container max-w-lg '>
 			<div className='flex flex-col items-center text-center '>
-				<Image
-					width={240}
-					height={44}
-					src={testimonial.logo.url}
-					alt={testimonial.position}
-					className='w-48 lg:w-52 xxl:w-60 object-contain'
-				/>
-				<blockquote className='my-6 text-xl font-semibold md:my-8 md:text-2xl  max-w-xs md:max-w-full px-4'>
-					{testimonial.testimonialDescription}
-				</blockquote>
-				<div className='flex flex-col items-center justify-center'>
+				<motion.div
+					initial={{ opacity: 0, x: 20 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					transition={{ delay: 0, duration: 0.6 }}>
 					<Image
-						width={64}
-						height={64}
-						src={testimonial.avatar.url}
-						alt={testimonial.name}
-						className='mb-4 size-16 min-h-16 min-w-16 rounded-full object-cover'
+						width={240}
+						height={44}
+						src={testimonial.logo.url}
+						alt={testimonial.position}
+						className='w-48 lg:w-52 xxl:w-60 object-contain'
 					/>
+				</motion.div>
+				<motion.blockquote
+					initial={{ opacity: 0, x: 20 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					transition={{ delay: 0.2, duration: 0.3 }}
+					className='my-6 text-xl font-semibold md:my-8 md:text-2xl  max-w-xs md:max-w-full px-4'>
+					{testimonial.testimonialDescription}
+				</motion.blockquote>
+				<div className='flex flex-col items-center justify-center'>
+					<motion.div
+						initial={{ opacity: 0, x: 20 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ delay: 0.3, duration: 0.3 }}>
+						<Image
+							width={64}
+							height={64}
+							src={testimonial.avatar.url}
+							alt={testimonial.name}
+							className='mb-4 size-16 min-h-16 min-w-16 rounded-full object-cover'
+						/>
+					</motion.div>
 					<div className='flex flex-col items-center justify-center '>
-						<p className='font-semibold'>{testimonial.name}</p>
-						<p>
+						<motion.p
+							initial={{ opacity: 0, x: 20 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							transition={{ delay: 0.4, duration: 0.3 }}
+							className='font-semibold'>
+							{testimonial.name}
+						</motion.p>
+						<motion.p
+							initial={{ opacity: 0, x: 20 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							transition={{ delay: 0.5, duration: 0.3 }}>
 							<span>{testimonial.position}</span>{' '}
 							{/* <span>{testimonial.companyName}</span> */}
-						</p>
+						</motion.p>
 					</div>
 				</div>
 			</div>

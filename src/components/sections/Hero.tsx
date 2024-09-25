@@ -1,10 +1,13 @@
 /** @format */
 
+'use client';
+
 import { THero } from '@/lib/types';
 import { MoveRight } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '../ui/button';
 import Header from '../ui/Header';
+import { motion } from 'framer-motion';
 
 export default function Hero(props: THero) {
 	return (
@@ -15,14 +18,25 @@ export default function Hero(props: THero) {
 				<Header url={props.logoNav.url} />
 				<div className='w-full h-full  flex justify-between items-center flex-col lg:flex-row gap-20'>
 					<div className='flex flex-col gap-5 lg:w-2/3'>
-						<h1 className='text-zinc-50 font-bold text-5xl md:text-7xl xxl:text-10xl relative z-20'>
+						<motion.h1
+							initial={{ opacity: 0, x: -20 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ duration: 0.3 }}
+							className='text-zinc-50 font-bold text-5xl md:text-7xl xxl:text-10xl relative z-20'>
 							{props.headline}
 							<span className='bg-brand-yellow-500 rounded-full w-24 h-24 absolute blur-3xl top-10 right-10 xl:-right-40 z-10' />
-						</h1>
-						<p className='text-zinc-200 font-normal max-w-md text-lg xxl:text-xl'>
+						</motion.h1>
+						<motion.p
+							initial={{ opacity: 0, x: -20 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ delay: 0.2, duration: 0.3 }}
+							className='text-zinc-200 font-normal max-w-md text-lg xxl:text-xl'>
 							{props.subheadline}
-						</p>
-						<a
+						</motion.p>
+						<motion.a
+							initial={{ opacity: 0, x: -20 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ delay: 0.4, duration: 0.3 }}
 							href='https://typebot.co/my-typebot-okmrw5c'
 							target='_blank'
 							rel='noopener noreferrer'>
@@ -30,16 +44,20 @@ export default function Hero(props: THero) {
 								{props.ctaHero}
 								<MoveRight className='group-hover:translate-x-1 transition-all duration-200 ease-linear' />
 							</Button>
-						</a>
+						</motion.a>
 					</div>
-					<div className='w-full lg:w-1/2 z-20'>
+					<motion.div
+						initial={{ opacity: 0, x: 20 }}
+						animate={{ opacity: 1, x: 0 }}
+						transition={{ delay: 0.6, duration: 0.3 }}
+						className='w-full lg:w-1/2 z-20'>
 						<Image
 							width={500}
 							height={400}
 							src={props.imageHero.url}
 							alt='estratégia'
 							className='object-cover rounded-lg size-full'></Image>
-					</div>
+					</motion.div>
 				</div>
 			</>
 		</section>

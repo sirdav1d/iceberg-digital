@@ -6,6 +6,7 @@ import { HygraphBenefit } from '@/lib/types';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 type Props = {
 	contents: HygraphBenefit[];
@@ -38,16 +39,33 @@ export const Layout349 = (props: Layout349Props) => {
 			className='px-[5%]'>
 			<div className='container relative grid items-stretch gap-x-12 py-16 sm:gap-y-12 lg:grid-cols-2 lg:py-0 lg:gap-x-20'>
 				<div className='grid grid-cols-1 gap-12 md:block'>
-					<h2 className='absolute text-4xl md:text-6xl lg:text-8xl font-bold top-0 md:top-20 w-full text-center '>
+					<motion.h2
+						initial={{ opacity: 0, x: -20 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ delay: 0, duration: 0.5 }}
+						exit={{ opacity: 0 }}
+						className='absolute text-4xl md:text-6xl lg:text-8xl font-bold top-0 md:top-20 w-full text-center '>
 						Nossos Diferenciais
-					</h2>
+					</motion.h2>
 					{contents.map((content, index) => (
 						<div key={index}>
 							<div className='flex flex-col items-start justify-center lg:h-screen'>
-								<h2 className='rb-5 my-5 text-2xl font-bold md:mb-6 md:text-4xl lg:text-6xl capitalize'>
+								<motion.h2
+									initial={{ opacity: 0, y: 20 }}
+									whileInView={{ opacity: 1, y: 0 }}
+									transition={{ delay: 0, duration: 0.3 }}
+									exit={{ opacity: 0 }}
+									className='rb-5 my-5 text-2xl font-bold md:mb-6 md:text-4xl lg:text-6xl capitalize'>
 									{content.title}
-								</h2>
-								<p className='md:text-lg'>{content.description}</p>
+								</motion.h2>
+								<motion.p
+									initial={{ opacity: 0, y: 20 }}
+									whileInView={{ opacity: 1, y: 0 }}
+									transition={{ delay: 0.2, duration: 0.3 }}
+									exit={{ opacity: 0 }}
+									className='md:text-lg'>
+									{content.description}
+								</motion.p>
 								<div className='block w-full lg:hidden'>
 									<Image
 										width={400}
@@ -72,17 +90,24 @@ export const Layout349 = (props: Layout349Props) => {
 				</div>
 				<div className='sticky top-0 hidden h-screen lg:flex md:flex-col md:items-center md:justify-center'>
 					{contents.map((content, index) => (
-						<Image
-							width={440}
-							height={400}
-							key={index}
-							src={content.image.url}
-							className={clsx('absolute w-full', {
-								'opacity-100': activeSection === index + 2,
-								'opacity-0': activeSection !== index + 2,
-							})}
-							alt={'Imagem ilustrativa'}
-						/>
+						<AnimatePresence mode='wait'>
+							{activeSection === index + 2 && (
+								<motion.img
+									initial={{ opacity: 0 }}
+									whileInView={{ opacity: 1 }}
+									transition={{ delay: 0, duration: 0.3 }}
+									width={440}
+									height={400}
+									key={index}
+									src={content.image.url}
+									className={clsx('absolute w-full', {
+										'opacity-100': activeSection === index + 2,
+										'opacity-0': activeSection !== index + 2,
+									})}
+									alt={'Imagem ilustrativa'}
+								/>
+							)}
+						</AnimatePresence>
 					))}
 				</div>
 			</div>
