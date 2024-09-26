@@ -52,3 +52,10 @@ export const HomeQuery = `query MyQuery {
     }
   }
 }`;
+
+export const PoliticQuery = `query MyQuery {
+  politics {
+    politicContent
+    termContent
+  }
+}`;

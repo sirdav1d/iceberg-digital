@@ -71,3 +71,12 @@ export type Testimonial = {
 	logo: HygraphImage;
 	avatar: HygraphImage;
 };
+
+export type Politic = {
+	politicContent: string;
+	termContent: string;
+};
+
+export type PoliticPage = {
+	politics: Politic[];
+};
