@@ -42,7 +42,7 @@ export const Layout349 = (props: Layout349Props) => {
 					<motion.h2
 						initial={{ opacity: 0, x: -20 }}
 						whileInView={{ opacity: 1, x: 0 }}
-						transition={{ delay: 0, duration: 0.5 }}
+						transition={{ delay: 0.5, duration: 0.3 }}
 						exit={{ opacity: 0 }}
 						className='absolute text-4xl md:text-6xl lg:text-8xl font-bold top-0 md:top-20 w-full text-center '>
 						Nossos Diferenciais

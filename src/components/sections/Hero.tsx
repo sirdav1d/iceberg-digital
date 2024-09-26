@@ -13,7 +13,7 @@ export default function Hero(props: THero) {
 	return (
 		<section
 			id='home'
-			className='max-w-full min-h-full bg-brand-green-600 md:m-5 flex flex-col items-center px-4 py-10 md:px-14 md:py-14 shadow-xlarge gap-14 md:rounded-xl '>
+			className='max-w-full min-h-full bg-gradient-to-r from-brand-green-600 to-brand-green-800 md:m-5 flex flex-col items-center px-4 py-10 md:px-14 md:py-14 shadow-xlarge gap-14 md:rounded-xl '>
 			<>
 				<Header url={props.logoNav.url} />
 				<div className='w-full h-full  flex justify-between items-center flex-col lg:flex-row gap-20'>

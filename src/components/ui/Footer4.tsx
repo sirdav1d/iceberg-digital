@@ -2,13 +2,14 @@
 
 import {
 	BiLogoFacebookCircle,
+	BiLogoGoogle,
 	BiLogoInstagram,
 	BiLogoLinkedinSquare,
-	BiLogoYoutube,
 } from 'react-icons/bi';
 
 import logo from '@/assets/logo.png';
 import Image from 'next/image';
+import logoRA from '@/assets/reclame-aqui-logo.png';
 
 type ImageProps = {
 	url?: string;
@@ -52,7 +53,7 @@ export const Footer4 = (props: Footer4Props) => {
 		...props,
 	} as Props;
 	return (
-		<footer className='px-[5%] py-12 md:py-18 lg:py-20 w-full bg-gradient-to-r from-zinc-700 to-zinc-950 text-zinc-50'>
+		<footer className='px-[5%] py-12 md:py-18 lg:py-20 w-full bg-gradient-to-r from-brand-green-600 to-brand-green-900 text-zinc-50'>
 			<div className='container'>
 				<div className='grid grid-cols-1 items-center justify-center justify-items-center w-full gap-x-[4vw] gap-y-12 pb-12 md:pb-18 lg:grid-cols-[0.25fr_1fr_0.25fr] lg:justify-between lg:gap-y-4 lg:pb-20'>
 					<a
@@ -83,9 +84,10 @@ export const Footer4 = (props: Footer4Props) => {
 							))}
 						</ul>
 					))}
-					<div className='flex items-start justify-start justify-items-center gap-x-3 lg:justify-self-end'>
+					<div className='flex items-center justify-start justify-items-center gap-x-3 w-full lg:justify-self-end '>
 						{socialMediaLinks.map((link, index) => (
 							<a
+								target='_blank'
 								className='hover:text-yellow-400 transition-all duration-200 ease-linear'
 								key={index}
 								href={link.url}>
@@ -128,10 +130,35 @@ export const Footer4Defaults: Footer4Props = {
 		},
 	],
 	socialMediaLinks: [
-		{ url: '#', icon: <BiLogoFacebookCircle className='size-8' /> },
-		{ url: '#', icon: <BiLogoInstagram className='size-8' /> },
-		{ url: '#', icon: <BiLogoLinkedinSquare className='size-8' /> },
-		{ url: '#', icon: <BiLogoYoutube className='size-8' /> },
+		{
+			url: 'https://www.facebook.com/IcebergDigitalAds',
+			icon: <BiLogoFacebookCircle className='size-8' />,
+		},
+		{
+			url: 'https://www.instagram.com/agencia_iceberg',
+			icon: <BiLogoInstagram className='size-8' />,
+		},
+		{
+			url: 'https://www.linkedin.com/company/icebergdigitalltda/',
+			icon: <BiLogoLinkedinSquare className='size-8' />,
+		},
+		{
+			url: 'https://g.page/r/CUs4QPf2ABm-EBM/review',
+			icon: <BiLogoGoogle className='size-8' />,
+		},
+		{
+			url: 'https://www.reclameaqui.com.br/empresa/iceberg-digital/',
+			icon: (
+				<div className='w-32'>
+					<Image
+						className='w-32 grayscale hover:grayscale-0 transition-all ease-linear duration-200'
+						width={800}
+						height={800}
+						src={logoRA}
+						alt='Logo Reclame Aqui'></Image>
+				</div>
+			),
+		},
 	],
 	footerText: '© 2024 Iceberg Digital. Todos Os Direitos Reservados.',
 	footerLinks: [
