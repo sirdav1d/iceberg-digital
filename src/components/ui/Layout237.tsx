@@ -40,7 +40,7 @@ export const Layout237 = (props: Layout237Props) => {
 							whileInView={{ opacity: 1, x: 0 }}
 							transition={{ delay: index * 0.15, duration: 0.3 }}
 							key={index}
-							className={`hover:bg-brand-green-500 border-b-4 border-brand-yellow-500 group hover:scale-110 hover:text-zinc-50 h-full transition-all ease-linear duration-200 flex w-full flex-col items-start p-5 rounded-lg shadow-medium`}>
+							className={`hover:bg-brand-green-500 border-b-4 border-brand-green-500 group hover:scale-110 hover:text-zinc-50 h-full transition-all ease-linear duration-200 flex w-full flex-col items-start p-5 rounded-lg shadow-medium`}>
 							<div className='mb-5 ml-1 scale-150'>
 								<CMSIcon icon={section.iconSvg}></CMSIcon>
 							</div>
