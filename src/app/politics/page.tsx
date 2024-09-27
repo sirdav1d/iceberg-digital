@@ -16,7 +16,7 @@ export default async function Politcs() {
 
 	return (
 		<main className=' w-full '>
-			<div className='max-w-xl my-20 flex flex-col items-center justify-center mx-auto  gap-5'>
+			<div className='max-w-xl my-20 flex flex-col items-center justify-center w-full mx-5 md:mx-auto  gap-5'>
 				<a href='/'>
 					<Image
 						width={320}
