@@ -15,8 +15,8 @@ export default async function Politcs() {
 	const data = resp.politics[0];
 
 	return (
-		<main className=' w-full '>
-			<div className='max-w-xl my-20 flex flex-col items-center justify-center w-full mx-5 md:mx-auto  gap-5'>
+		<main className='w-full overflow-x-hidden '>
+			<div className='md:max-w-xl my-20 flex flex-col items-center mx-5 justify-center md:mx-auto  gap-5'>
 				<a href='/'>
 					<Image
 						width={320}

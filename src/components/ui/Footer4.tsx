@@ -84,7 +84,7 @@ export const Footer4 = (props: Footer4Props) => {
 							))}
 						</ul>
 					))}
-					<div className='flex items-center justify-start justify-items-center gap-x-3 w-full lg:justify-self-end '>
+					<div className='flex items-center justify-center justify-items-center gap-x-3 w-full lg:justify-self-end '>
 						{socialMediaLinks.map((link, index) => (
 							<a
 								target='_blank'
