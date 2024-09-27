@@ -60,7 +60,7 @@ export default function Hero(props: THero) {
 							}}
 							initial={{ scale: 1 }}
 							exit={{ scale: 1 }}
-							className='bg-brand-yellow-500 rounded-full w-40 h-40 lg:w-64 lg:h-64 absolute blur-[88px] mt-20 lg:ml-10 -z-10 '
+							className='bg-brand-yellow-500 rounded-full w-28 h-28 lg:w-64 lg:h-64 absolute blur-2xl ml-5 lg:blur-[88px] lg:mt-20 lg:ml-10 -z-10 '
 						/>
 						<Image
 							width={1400}
