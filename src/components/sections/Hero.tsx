@@ -8,7 +8,6 @@ import Image from 'next/image';
 import { Button } from '../ui/button';
 import Header from '../ui/Header';
 import { motion } from 'framer-motion';
-import imageHero from '@/assets/advogado-de-vista-frontal-olhando-para-o-seu-tablet.png';
 
 export default function Hero(props: THero) {
 	return (
