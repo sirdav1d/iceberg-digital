@@ -98,7 +98,7 @@ export const Layout349 = (props: Layout349Props) => {
 									initial={{ opacity: 0 }}
 									whileInView={{ opacity: 1 }}
 									transition={{ delay: 0, duration: 0.3 }}
-									width={440}
+									width={400}
 									height={400}
 									key={index}
 									src={content.image.url}
