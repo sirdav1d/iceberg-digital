@@ -44,7 +44,7 @@ export const Layout349 = (props: Layout349Props) => {
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ delay: 0.5, duration: 0.3 }}
 						exit={{ opacity: 0 }}
-						className='absolute text-4xl md:text-6xl lg:text-8xl font-bold top-0 md:top-20 w-full text-center '>
+						className='absolute text-4xl md:text-6xl lg:text-8xl font-bold top-0 xl:top-20 w-full text-center '>
 						Nossos Diferenciais
 					</motion.h2>
 					{contents.map((content, index) => (
