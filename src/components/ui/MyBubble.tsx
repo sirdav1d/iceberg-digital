@@ -2,13 +2,13 @@
 
 'use client';
 
-import { Bubble } from '@typebot.io/nextjs';
+// import { Bubble } from '@typebot.io/nextjs';
 import React from 'react';
 
 export default function MyBubble() {
 	return (
 		<>
-			<Bubble
+			{/* <Bubble
 				typebot='my-typebot-okmrw5c'
 				theme={{
 					button: { backgroundColor: '#fbe505', size: 'medium' },
@@ -21,7 +21,7 @@ export default function MyBubble() {
 					},
 					placement: 'left',
 				}}
-			/>
+			/> */}
 		</>
 	);
 }
