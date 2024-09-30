@@ -7,10 +7,6 @@ import {
 	BiLogoLinkedinSquare,
 } from 'react-icons/bi';
 
-import logo from '@/assets/logo.png';
-import Image from 'next/image';
-import logoRA from '@/assets/reclame-aqui-logo.png';
-
 type ImageProps = {
 	url?: string;
 	src: string;
@@ -59,10 +55,10 @@ export const Footer4 = (props: Footer4Props) => {
 					<a
 						href={'/'}
 						className='lg:justify-self-start'>
-						<Image
+						<img
 							width={440}
 							height={280}
-							src={logo}
+							src={'/logo.png'}
 							alt={'logo iceberg digital'}
 							className='inline-block lg:scale-150'
 						/>
@@ -150,12 +146,13 @@ export const Footer4Defaults: Footer4Props = {
 			url: 'https://www.reclameaqui.com.br/empresa/iceberg-digital/',
 			icon: (
 				<div className='w-32'>
-					<Image
+					<img
 						className='w-32 grayscale hover:grayscale-0 transition-all ease-linear duration-200'
 						width={800}
 						height={800}
-						src={logoRA}
-						alt='Logo Reclame Aqui'></Image>
+						src={'reclame-aqui-logo.png'}
+						alt='Logo Reclame Aqui'
+					/>
 				</div>
 			),
 		},

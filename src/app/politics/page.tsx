@@ -6,8 +6,6 @@ import { PoliticQuery } from '@/lib/queries';
 import { fetchHygraph } from '@/lib/fetchHygraph';
 import { PoliticPage } from '@/lib/types';
 import { CMSIcon } from '@/components/ui/CMSIcon';
-import Image from 'next/image';
-import logo from '@/assets/logo-dark.png';
 import { Footer4 } from '@/components/ui/Footer4';
 
 export default async function Politcs() {
@@ -18,11 +16,12 @@ export default async function Politcs() {
 		<main className='w-full overflow-x-hidden '>
 			<div className='md:max-w-xl my-20 flex flex-col items-center mx-5 justify-center md:mx-auto  gap-5'>
 				<a href='/'>
-					<Image
+					<img
 						width={320}
 						height={80}
-						src={logo}
-						alt='logo Iceberg'></Image>
+						src={'/logo-dark.png'}
+						alt='logo Iceberg'
+					/>
 				</a>
 				<CMSIcon icon={data.termContent}></CMSIcon>
 				<CMSIcon icon={data.politicContent}></CMSIcon>

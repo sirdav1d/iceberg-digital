@@ -4,7 +4,6 @@
 
 import { THero } from '@/lib/types';
 import { MoveRight } from 'lucide-react';
-import Image from 'next/image';
 import { Button } from '../ui/button';
 import Header from '../ui/Header';
 import { motion } from 'framer-motion';
@@ -70,12 +69,13 @@ export default function Hero(props: THero) {
 							exit={{ scale: 1 }}
 							className='bg-brand-yellow-500 rounded-full w-28 h-28 xl:w-64 xl:h-64 absolute blur-2xl ml-5 lg:blur-[80px] lg:mt-20 lg:ml-10 -z-10 '
 						/>
-						<Image
+						<img
 							width={1400}
 							height={1100}
 							src={props.imageHero.url}
 							alt='estratégia'
-							className='object-cover rounded-lg size-full'></Image>
+							className='object-cover rounded-lg size-full'
+						/>
 					</motion.div>
 				</div>
 			</>

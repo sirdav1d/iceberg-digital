@@ -4,7 +4,6 @@
 
 import { HygraphBenefit } from '@/lib/types';
 import clsx from 'clsx';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -67,7 +66,7 @@ export const Layout349 = (props: Layout349Props) => {
 									{content.description}
 								</motion.p>
 								<div className='block w-full lg:hidden'>
-									<Image
+									<img
 										width={400}
 										height={400}
 										src={content.image.url}

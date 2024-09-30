@@ -9,7 +9,6 @@ import {
 	SheetTrigger,
 } from '@/components/ui/sheet';
 import { AlignJustify } from 'lucide-react';
-import Image from 'next/image';
 import { IoLogoWhatsapp } from 'react-icons/io5';
 import { Button } from './button';
 import {
@@ -18,19 +17,19 @@ import {
 	NavigationMenuLink,
 	NavigationMenuList,
 } from './navigation-menu';
-import logodark from '@/assets/logo-dark.png';
 
 export default function Header(props: { url: string }) {
 	return (
 		<section className='flex justify-between w-full items-center'>
 			<div className='flex flex-col lg:flex-row items-center justify-between'>
 				<a href='/'>
-					<Image
+					<img
 						className='w-[220px] md:w-[300px]'
 						src={props.url}
 						width={280}
 						height={200}
-						alt='logo Iceberg Digital '></Image>
+						alt='logo Iceberg Digital '
+					/>
 				</a>
 			</div>
 			<div className='lg:flex gap-5 hidden'>
@@ -90,12 +89,13 @@ export default function Header(props: { url: string }) {
 							<a
 								href='/'
 								className=''>
-								<Image
+								<img
 									className='w-full'
-									src={logodark}
+									src={'/logo-dark.png'}
 									width={260}
 									height={200}
-									alt='logo Iceberg Digital '></Image>
+									alt='logo Iceberg Digital '
+								/>
 							</a>
 						</SheetHeader>
 						<div className='flex flex-col gap-5 justify-between'>
