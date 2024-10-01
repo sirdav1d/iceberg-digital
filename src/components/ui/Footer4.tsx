@@ -151,7 +151,7 @@ export const Footer4Defaults: Footer4Props = {
 						className='w-32 grayscale hover:grayscale-0 transition-all ease-linear duration-200'
 						width={800}
 						height={800}
-						src={'reclame-aqui-logo.png'}
+						src={'/reclame-aqui-logo.png'}
 						alt='Logo Reclame Aqui'
 					/>
 				</div>
