@@ -7,6 +7,7 @@ import { fetchHygraph } from '@/lib/fetchHygraph';
 import { PoliticPage } from '@/lib/types';
 import { CMSIcon } from '@/components/ui/CMSIcon';
 import { Footer4 } from '@/components/ui/Footer4';
+import Image from 'next/image';
 
 export default async function Politcs() {
 	const resp: PoliticPage = await fetchHygraph(PoliticQuery);
@@ -16,7 +17,7 @@ export default async function Politcs() {
 		<main className='w-full overflow-x-hidden '>
 			<div className='md:max-w-xl my-20 flex flex-col items-center mx-5 justify-center md:mx-auto  gap-5'>
 				<a href='/'>
-					<img
+					<Image
 						width={320}
 						height={80}
 						src={'/logo-dark.png'}

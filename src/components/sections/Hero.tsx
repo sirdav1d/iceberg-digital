@@ -8,6 +8,7 @@ import { Button } from '../ui/button';
 import Header from '../ui/Header';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from '@relume_io/relume-ui';
+import Image from 'next/image';
 
 export default function Hero(props: THero) {
 	const mobile = useMediaQuery('(min-width: 660px)');
@@ -69,7 +70,7 @@ export default function Hero(props: THero) {
 							exit={{ scale: 1 }}
 							className='bg-brand-yellow-500 rounded-full w-28 h-28 xl:w-64 xl:h-64 absolute blur-2xl ml-5 lg:blur-[80px] lg:mt-20 lg:ml-10 -z-10 '
 						/>
-						<img
+						<Image
 							width={1400}
 							height={1100}
 							src={props.imageHero.url}
