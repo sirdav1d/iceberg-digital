@@ -1,7 +1,6 @@
 /** @format */
 
 import { HygraphImage } from '@/lib/types';
-import Image from 'next/image';
 
 type Props = {
 	heading: string;
@@ -30,7 +29,7 @@ export const LogoList3 = (props: Logo3Props) => {
 							key={index}
 							className='flex shrink-0 animate-loop-horizontally items-center'>
 							{logos.map((logo, index) => (
-								<Image
+								<img
 									width={120}
 									height={64}
 									key={index}

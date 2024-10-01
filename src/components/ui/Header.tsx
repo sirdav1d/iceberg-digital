@@ -17,14 +17,13 @@ import {
 	NavigationMenuLink,
 	NavigationMenuList,
 } from './navigation-menu';
-import Image from 'next/image';
 
 export default function Header(props: { url: string }) {
 	return (
 		<section className='flex justify-between w-full items-center'>
 			<div className='flex flex-col lg:flex-row items-center justify-between'>
 				<a href='/'>
-					<Image
+					<img
 						className='w-[220px] md:w-[300px]'
 						src={props.url}
 						width={280}
@@ -90,7 +89,7 @@ export default function Header(props: { url: string }) {
 							<a
 								href='/'
 								className=''>
-								<Image
+								<img
 									className='w-full'
 									src={'/logo-dark.png'}
 									width={260}

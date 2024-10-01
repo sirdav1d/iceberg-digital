@@ -6,7 +6,7 @@ import { HygraphBenefit } from '@/lib/types';
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import Image from 'next/image';
+
 
 type Props = {
 	contents: HygraphBenefit[];
@@ -67,7 +67,7 @@ export const Layout349 = (props: Layout349Props) => {
 									{content.description}
 								</motion.p>
 								<div className='block w-full lg:hidden'>
-									<Image
+									<img
 										width={400}
 										height={400}
 										src={content.image.url}
@@ -94,7 +94,7 @@ export const Layout349 = (props: Layout349Props) => {
 							key={index}
 							mode='wait'>
 							{activeSection === index + 2 && (
-								<Image
+								<img
 									width={400}
 									height={400}
 									key={index}
