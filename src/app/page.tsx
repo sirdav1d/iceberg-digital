@@ -42,8 +42,8 @@ export default async function Home() {
 
 			<Testimonial7 testimonials={data.testimonials} />
 			<Contact5
-				email='comercial@icebergdigital.com.br'
-				phone='+55 41 98724-1092'
+				email='atendimento@icebergdigital.com.br'
+				phone='+55 41 98738-8840'
 				heading='Fale Conosco'
 				description='Entre em Contato e Descubra Como Podemos Fortalecer Sua Presença Digital e Impulsionar Seu Sucesso'
 			/>

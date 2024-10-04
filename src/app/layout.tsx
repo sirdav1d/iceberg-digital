@@ -22,6 +22,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='pt-BR'>
+			{/* tag manager */}
 			<body className={`${sora.className} antialiased`}>{children}</body>
 		</html>
 	);
