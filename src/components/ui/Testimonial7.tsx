@@ -14,6 +14,7 @@ import {
 import clsx from 'clsx';
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 type Props = {
 	testimonials: Testimonial[];
@@ -93,7 +94,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
 					initial={{ opacity: 0, x: 20 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ delay: 0, duration: 0.6 }}>
-					<img
+					<Image
 						width={240}
 						height={44}
 						src={testimonial.logo.url}
@@ -113,7 +114,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
 						initial={{ opacity: 0, x: 20 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ delay: 0.3, duration: 0.3 }}>
-						<img
+						<Image
 							width={64}
 							height={64}
 							src={testimonial.avatar.url}

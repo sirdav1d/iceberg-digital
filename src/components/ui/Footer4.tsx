@@ -1,17 +1,12 @@
 /** @format */
 
+import Image from 'next/image';
 import {
 	BiLogoFacebookCircle,
 	BiLogoGoogle,
 	BiLogoInstagram,
 	BiLogoLinkedinSquare,
 } from 'react-icons/bi';
-
-type ImageProps = {
-	url?: string;
-	src: string;
-	alt?: string;
-};
 
 type Links = {
 	title: string;
@@ -33,7 +28,7 @@ type FooterLink = {
 };
 
 type Props = {
-	logo: ImageProps;
+	logo: string;
 	columnLinks: ColumnLinks[];
 	socialMediaLinks: SocialMediaLinks[];
 	footerText: string;
@@ -55,10 +50,10 @@ export const Footer4 = (props: Footer4Props) => {
 					<a
 						href={'/'}
 						className='lg:justify-self-start'>
-						<img
+						<Image
 							width={440}
-							height={280}
-							src={'/logo.png'}
+							height={300}
+							src={props.logo!}
 							alt={'logo iceberg digital'}
 							className='inline-block lg:scale-150'
 						/>
@@ -146,7 +141,7 @@ export const Footer4Defaults: Footer4Props = {
 			url: 'https://www.reclameaqui.com.br/empresa/iceberg-digital/',
 			icon: (
 				<div className='w-32'>
-					<img
+					<Image
 						className='w-32 grayscale hover:grayscale-0 transition-all ease-linear duration-200'
 						width={800}
 						height={800}

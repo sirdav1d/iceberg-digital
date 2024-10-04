@@ -47,7 +47,7 @@ export default async function Home() {
 				heading='Fale Conosco'
 				description='Entre em Contato e Descubra Como Podemos Fortalecer Sua Presença Digital e Impulsionar Seu Sucesso'
 			/>
-			<Footer4 />
+			<Footer4 logo={data.logoNav.url} />
 		</main>
 	);
 }
