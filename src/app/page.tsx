@@ -30,10 +30,10 @@ export default async function Home() {
 					url: data.imageHero.url,
 				}}
 			/>
-			<LogoList3
+			{/* <LogoList3
 				heading='Empresas Que Confiam Em Nosso Trabalho'
 				logos={data.logoList}
-			/>
+			/> */}
 			<Layout237
 				heading={data.featureTitle}
 				sections={data.features}
