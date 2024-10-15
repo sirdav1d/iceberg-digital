@@ -6,6 +6,7 @@ import {
 	BiLogoGoogle,
 	BiLogoInstagram,
 	BiLogoLinkedinSquare,
+	BiLogoYoutube,
 } from 'react-icons/bi';
 
 type Links = {
@@ -136,6 +137,10 @@ export const Footer4Defaults: Footer4Props = {
 		{
 			url: 'https://g.page/r/CUs4QPf2ABm-EBM/review',
 			icon: <BiLogoGoogle className='size-8' />,
+		},
+		{
+			url: 'https://www.youtube.com/@ads.alissonlara/videos',
+			icon: <BiLogoYoutube className='size-8' />,
 		},
 		{
 			url: 'https://www.reclameaqui.com.br/empresa/iceberg-digital/',
