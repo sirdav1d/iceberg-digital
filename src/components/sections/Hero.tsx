@@ -44,7 +44,7 @@ export default function Hero(props: THero) {
 							initial={{ opacity: 0, x: -20 }}
 							animate={{ opacity: 1, x: 0 }}
 							transition={{ delay: 0.4, duration: 0.3 }}
-							href='https://typebot.co/my-typebot-okmrw5c'
+							href='https://typebot.co/my-typebot-oiffwhn'
 							target='_blank'
 							rel='noopener noreferrer'>
 							<Button className='mt-5 xl:mt-10 w-fit text-lg xxl:text-xl hover:shadow-lg group px-5'>
