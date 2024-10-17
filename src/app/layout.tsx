@@ -3,6 +3,7 @@
 import type { Metadata } from 'next';
 import { Sora } from 'next/font/google';
 import './globals.css';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 const sora = Sora({
 	display: 'swap',
@@ -22,7 +23,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='pt-BR'>
-			{/* tag manager */}
+			<GoogleTagManager gtmId='GTM-WJCLHDV5' />
 			<body className={`${sora.className} antialiased`}>{children}</body>
 		</html>
 	);
